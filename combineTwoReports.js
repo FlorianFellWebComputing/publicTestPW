@@ -1,8 +1,8 @@
 const { mergeHTMLReports } = require("playwright-merge-html-reports");
 
 const inputReportPaths = [
-    process.cwd() + "/reports1",
-    process.cwd() + "/reports2"
+    process.cwd() + "/report1",
+    process.cwd() + "/report2"
   ];
   
   const config = {
