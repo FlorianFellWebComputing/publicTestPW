@@ -1,13 +1,16 @@
 const { mergeHTMLReports } = require("playwright-merge-html-reports");
 
-const inputReportPaths = [
-    process.cwd() + "/report1",
-    process.cwd() + "/report2"
-  ];
+console.log(process.argv[2]);
+
+let inputReportPaths = [];
+
+for(let i = 1; i <= process.argv[2]; i++) {
+  inputReportPaths.push(process.cwd() + "/report" + i);
+} 
+
+const config = {
+  outputFolderName: "merged-html-report", // default value
+  outputBasePath: process.cwd() // default value
+}
   
-  const config = {
-    outputFolderName: "merged-html-report", // default value
-    outputBasePath: process.cwd() // default value
-  }
-  
-  mergeHTMLReports(inputReportPaths, config)
+mergeHTMLReports(inputReportPaths, config)
