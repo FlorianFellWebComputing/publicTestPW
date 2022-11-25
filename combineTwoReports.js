@@ -1,7 +1,5 @@
 const { mergeHTMLReports } = require("playwright-merge-html-reports");
 
-console.log(process.argv[2]);
-
 let inputReportPaths = [];
 
 for(let i = 1; i <= process.argv[2]; i++) {
