@@ -5,6 +5,8 @@ test.describe.configure({ mode: 'parallel' });
 test('homepage has Playwright in title and get started link linking to the intro page', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
+  await page.screenshot({ path: 'screenshot.png', fullPage: true });
+  
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
 
