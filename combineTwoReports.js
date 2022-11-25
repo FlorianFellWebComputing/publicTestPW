@@ -5,7 +5,7 @@ console.log(process.argv[2]);
 let inputReportPaths = [];
 
 for(let i = 1; i <= process.argv[2]; i++) {
-  inputReportPaths.push(process.cwd() + "/report" + i);
+  inputReportPaths.push(process.cwd() + "/shardReports/report" + i);
 } 
 
 const config = {
